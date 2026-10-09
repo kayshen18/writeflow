@@ -1,0 +1,120 @@
+<svg
+  xmlns="http://www.w3.org/2000/svg"
+  viewBox="0 0 64 64"
+  fill="none"
+>
+  <defs>
+    <filter
+      id="pencil-texture"
+      x="-8%"
+      y="-8%"
+      width="116%"
+      height="116%"
+    >
+      <feTurbulence
+        type="fractalNoise"
+        baseFrequency="0.95"
+        numOctaves="2"
+        seed="7"
+        result="noise"
+      />
+      <feDisplacementMap
+        in="SourceGraphic"
+        in2="noise"
+        scale="0.45"
+        xChannelSelector="R"
+        yChannelSelector="G"
+      />
+    </filter>
+  </defs>
+
+  <g filter="url(#pencil-texture)">
+    <path
+      d="M13 6.5
+         C20 6.2 34 6.8 43 6.5
+         L52 16
+         C51.7 26 52.3 43 51.7 56
+         C42 55.6 25 56.3 13 55.8
+         C13.4 43 12.7 20 13 6.5Z"
+      fill="#f7f7f7"
+      stroke="#00202e"
+      stroke-width="2.2"
+      stroke-linecap="round"
+      stroke-linejoin="round"
+    />
+
+    <path
+      d="M43 7
+         C43.2 10 42.8 13 43 16
+         C46 15.8 49 16.2 51.5 16"
+      stroke="#00202e"
+      stroke-width="2.2"
+      stroke-linecap="round"
+      stroke-linejoin="round"
+    />
+
+    <path
+      d="M20 23
+         C26 22.6 34 23.4 43 23"
+      stroke="#69A097"
+      stroke-width="1.8"
+      stroke-linecap="round"
+    />
+
+    <path
+      d="M20 30
+         C27 29.5 36 30.5 44 30"
+      stroke="#69A097"
+      stroke-width="1.8"
+      stroke-linecap="round"
+    />
+
+    <path
+      d="M20 37
+         C25 36.6 30 37.4 35 37"
+      stroke="#69A097"
+      stroke-width="1.8"
+      stroke-linecap="round"
+    />
+
+    <path
+      d="M31 49
+         L47 33
+         C48 32 49 32.2 50 33
+         L54 37
+         C54.8 38 55 39 54 40
+         L38 56
+         L30 57Z"
+      fill="#ffd380"
+      stroke="#00202e"
+      stroke-width="2.2"
+      stroke-linecap="round"
+      stroke-linejoin="round"
+    />
+
+    <path
+      d="M35 51
+         L50.5 35.5"
+      stroke="#00202e"
+      stroke-width="1.5"
+      stroke-linecap="round"
+    />
+
+    <path
+      d="M31 49
+         L30 57
+         L38 56Z"
+      fill="#fff4d8"
+      stroke="#00202e"
+      stroke-width="2"
+      stroke-linejoin="round"
+    />
+    <path
+      d="M30.5 56.5
+         L33.5 53.5"
+      stroke="#00202e"
+      stroke-width="2"
+      stroke-linecap="round"
+    />
+  </g>
+</svg>

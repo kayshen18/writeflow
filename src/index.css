@@ -1,0 +1,165 @@
+@import "tailwindcss";
+
+@import "./theme.css";
+
+.wf-editor-action {
+  display: inline-flex;
+  height: 2.75rem;
+  min-width: 5rem;
+  flex-shrink: 0;
+  align-items: center;
+  justify-content: center;
+  gap: 0.25rem;
+  padding: 0 1rem;
+  border: 1px solid var(--wf-button-border);
+  border-radius: 0.75rem;
+  background: var(--wf-button-bg);
+  color: var(--wf-button-text);
+  font-family: "Mukta Mahee", Arial, sans-serif;
+  font-size: 1rem;
+  font-weight: 600;
+  white-space: nowrap;
+  transition: background-color 150ms, filter 150ms;
+}
+
+.wf-editor-action:hover:not(:disabled) {
+  background: var(--wf-button-hover);
+}
+
+.wf-editor-action--save {
+  border-color: var(--wf-save);
+  background: var(--wf-save);
+}
+
+.wf-editor-action--discard {
+  border-color: var(--wf-action-contrast);
+  background: var(--wf-action-contrast);
+  color: var(--wf-action-contrast-text);
+}
+
+.wf-editor-action--save:hover:not(:disabled) {
+  background: var(--wf-save-hover);
+}
+
+.wf-editor-action--discard:hover:not(:disabled) {
+  background: var(--wf-action-contrast);
+  filter: brightness(0.9);
+}
+
+.wf-editor-action:focus-visible {
+  outline: 2px solid var(--wf-focus);
+  outline-offset: 3px;
+}
+
+.wf-editor-action:disabled {
+  cursor: not-allowed;
+  opacity: 0.6;
+}
+
+/* Kranky：艺术字体 */
+@font-face {
+  font-family: "Kranky";
+  src: url("./assets/fonts/Kranky/Kranky-Regular.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* Mukta Mahee：细体 */
+@font-face {
+  font-family: "Mukta Mahee";
+  src: url("./assets/fonts/MuktaMahee/MuktaMahee-Light.ttf")
+    format("truetype");
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* Mukta Mahee：常规 */
+@font-face {
+  font-family: "Mukta Mahee";
+  src: url("./assets/fonts/MuktaMahee/MuktaMahee-Regular.ttf")
+    format("truetype");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* Mukta Mahee：中等 */
+@font-face {
+  font-family: "Mukta Mahee";
+  src: url("./assets/fonts/MuktaMahee/MuktaMahee-Medium.ttf")
+    format("truetype");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* Mukta Mahee：粗体 */
+@font-face {
+  font-family: "Mukta Mahee";
+  src: url("./assets/fonts/MuktaMahee/MuktaMahee-Bold.ttf")
+    format("truetype");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* 方便在组件中使用的字体类 */
+.font-kranky {
+  font-family: "Kranky", cursive;
+}
+
+.font-mukta-mahee {
+  font-family: "Mukta Mahee", Arial, sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+/* Keep the login colors when the browser autofills saved credentials. */
+.login-input {
+  background-color: var(--wf-login-bg);
+  border-color: var(--wf-login-bg);
+  color: var(--wf-text);
+  caret-color: var(--wf-text);
+}
+
+.login-input:is(:autofill, :-webkit-autofill) {
+  -webkit-text-fill-color: var(--wf-text);
+  box-shadow: inset 0 0 0 1000px var(--wf-login-bg);
+}
+
+.login-input:focus {
+  border-color: var(--wf-login-focus);
+  box-shadow: inset 0 0 0 1000px var(--wf-login-bg), 0 0 0 4px color-mix(in srgb, var(--wf-login-focus) 25%, transparent);
+}
+
+body {
+  margin: 0;
+  font-family:
+    Arial,
+    "Microsoft YaHei",
+    sans-serif;
+}
+
+.home-function-card {
+  position: relative;
+  border: 0;
+  border-radius: 1.5rem;
+  background: var(--wf-surface);
+  box-shadow: 0 12px 28px var(--wf-card-shadow);
+}
+
+.home-function-card::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  pointer-events: none;
+}
+
+.home-function-card::before {
+  border: 2px dashed var(--wf-button-border);
+}

@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
+  <title>WriteFlow</title>
+  <rect width="64" height="64" rx="12" fill="#00202E" />
+  <path d="M10 15H19L25 40L29 24H35L39 40L45 15H54L43 49H35L32 36L29 49H21Z" fill="#FFD380" />
+</svg>
